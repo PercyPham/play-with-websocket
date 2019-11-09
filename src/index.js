@@ -22,4 +22,9 @@ io.on("connection", socket => {
   socket.on("chat", function(data) {
     io.sockets.emit("chat", data);
   });
+
+  socket.on("typing", function(data) {
+    // emit message to all others, but not the current one
+    socket.broadcast.emit("typing", data);
+  });
 });

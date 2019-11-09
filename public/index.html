@@ -6,9 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>WebSocket</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.dev.js"></script>
+    <link href="styles.css" rel="stylesheet" />
   </head>
   <body>
-    <h1>Cool, you see me!</h1>
+    <div id="mario-chat">
+      <div id="chat-window">
+        <div id="output"></div>
+      </div>
+      <input id="handle" type="text" placeholder="Handle" />
+      <input id="message" type="text" placeholder="Message" />
+      <button id="send">Send</button>
+    </div>
+
     <script src="/chat.js"></script>
   </body>
 </html>
